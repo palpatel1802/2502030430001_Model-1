@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Time Table</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            width: 85%;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e8e8e8;
+            font-weight: bold;
+        }
+
+        .special {
+            background-color: #d9edf7;
+            font-weight: bold;
+        }
+
+        .odd {
+            background-color: #f9f9f9;
+        }
+
+        .even {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>TIME TABLE</h1>
+
+<table>
+    <tr>
+        <th>Day/Period</th>
+        <th>I<br>9:30-10:20</th>
+        <th>II<br>10:20-11:10</th>
+        <th>III<br>11:10-12:00</th>
+        <th>12:00-12:40</th>
+        <th>IV<br>12:40-1:30</th>
+        <th>V<br>1:30-2:20</th>
+        <th>VI<br>2:20-3:10</th>
+        <th>VII<br>3:10-4:00</th>
+    </tr>
+
+    <tr>
+        <td class="highlight even"><b>Monday</b></td>
+        <td class="odd">Eng</td>
+        <td class="even">Mat</td>
+        <td class="odd">Che</td>
+        <td rowspan="6" class="special odd"><b>LUNCH</b></td>
+        <td colspan="3" class="special odd">LAB</td>
+        <td class="even">Phy</td>
+    </tr>
+
+    <tr>
+        <td class="highlight"><b>Tuesday</b></td>
+        <td colspan="3" class="special">LAB</td>
+        <td>Eng</td>
+        <td>Che</td>
+        <td>Mat</td>
+        <td class="special">SPORTS</td>
+    </tr>
+
+    <tr>
+        <td class="highlight"><b>Wednesday</b></td>
+        <td>Mat</td>
+        <td>Phy</td>
+        <td>Eng</td>
+        <td>Che</td>
+        <td colspan="3">LIBRARY</td>
+    </tr>
+
+    <tr>
+        <td class="highlight"><b>Thursday</b></td>
+        <td>Phy</td>
+        <td>Eng</td>
+        <td>Che</td>
+        <td colspan="3" class="special">LAB</td>
+        <td>Mat</td>
+    </tr>
+
+    <tr>
+        <td class="highlight"><b>Friday</b></td>
+        <td colspan="3" class="special">LAB</td>
+        <td>Mat</td>
+        <td>Che</td>
+        <td>Eng</td>
+        <td>Phy</td>
+    </tr>
+
+    <tr>
+        <td class="highlight"><b>Saturday</b></td>
+        <td>Eng</td>
+        <td>Che</td>
+        <td>Mat</td>
+        <td colspan="3">SEMINAR</td>
+        <td class="special">SPORTS</td>
+    </tr>
+
+</table>
+
+</body>
+</html>
