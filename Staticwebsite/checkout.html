@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout - MediConnect</title>
+<link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+<!-- LOGO -->
+<div class="logo">
+    <div class="logo-icon">+</div>
+    <div class="logo-text">MediConnect</div>
+</div>
+
+<!-- CHECKOUT -->
+<div class="checkout-container">
+
+    <h2>Checkout</h2>
+
+    <!-- TOTAL BOX -->
+    <div class="summary-box">
+        <h3>Order Summary</h3>
+
+        <p>Subtotal: <span id="subtotal">₹0</span></p>
+        <p>Delivery: Free</p>
+
+        <hr>
+
+        <h3>Total: <span id="total">₹0</span></h3>
+    </div>
+
+    <!-- ADDRESS -->
+    <div class="address-box">
+        <h3>Delivery Address</h3>
+
+        <input type="text" placeholder="Full Name">
+        <input type="text" placeholder="Mobile Number">
+        <textarea placeholder="Full Address"></textarea>
+
+        <select>
+            <option>Select City</option>
+            <option>Ahmedabad</option>
+            <option>Surat</option>
+            <option>Vadodara</option>
+        </select>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="payment-box">
+        <h3>Payment Method</h3>
+
+        <label>
+            <input type="radio" checked>
+            Cash on Delivery (COD)
+        </label>
+
+        <p class="note">Only COD available</p>
+    </div>
+
+    <button onclick="placeOrder()">Place Order</button>
+
+</div>
+
+<script>
+// GET TOTAL FROM CART
+let total = Number(localStorage.getItem("grandTotal")) || 0;
+
+document.getElementById("subtotal").innerText = "₹" + total;
+document.getElementById("total").innerText = "₹" + total;
+
+function placeOrder(){
+    alert("Order placed successfully! Pay via Cash on Delivery.");
+    localStorage.removeItem("grandTotal");
+    window.location.href = "order_confirmation.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Profile Creation</title>
+    <link rel="stylesheet" href="doctor-profile-creation.css">
+</head>
+
+<body>
+    <!-- LOGO -->
+    <div class="logo">
+
+        <div class="logo-icon">+</div>
+
+        <div class="logo-text">MediConnect</div>
+
+    </div>
+    <div class="register-container">
+
+        <h2>Create Doctor Profile</h2>
+
+        <form id="doctorForm">
+
+            <input type="text" placeholder="Full Name" required>
+
+            <select required>
+                <option value="">Select Specialization</option>
+                <option value="Cardiologist">Cardiologist</option>
+                <option value="Dentist">Dentist</option>
+                <option>Dermatologist</option>
+                <option>Pediatrician</option>
+                <option>Orthopedic</option>
+            </select>
+
+            <input type="number" placeholder="Years of Experience" required>
+
+            <input type="text" placeholder="Qualification" required>
+
+            <input type="text" placeholder="Clinic/Hospital Name" required>
+
+            <input type="number" placeholder="Consultation Fee">
+
+            <select required>
+                <option>Available Days</option>
+                <option>Mon-Fri</option>
+                <option>Mon-Sat</option>
+                <option>All Week</option>
+            </select>
+
+            <textarea placeholder="About Yourself"></textarea>
+
+            <div class="file-upload">
+
+                <label>Upload Profile Photo</label>
+                <input type="file" id="profilePhoto">
+                <!-- <input type="file" id="profilePhoto" accept="image/jpeg, image/png"> This will allow only JPG and PNG files to be selected.And open only image files in the file dialog. -->
+
+                <small class="error" id="fileError"></small>
+
+            </div>
+            <button>Create Profile</button>
+
+        </form>
+
+    </div>
+    <script>
+
+document.getElementById("doctorForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let fileInput = document.getElementById("profilePhoto");
+    let fileError = document.getElementById("fileError");
+
+    fileError.textContent = "";
+
+    let file = fileInput.files[0];
+
+    if(!file){
+        fileError.textContent = "Please upload profile photo.";
+        return;
+    }
+
+    let allowedTypes = ["image/jpeg","image/png"];
+
+    if(!allowedTypes.includes(file.type)){
+        fileError.textContent = "Only JPG and PNG files are allowed.";
+        return;
+    }
+
+    let maxSize = 10 * 1024 * 1024;
+
+    if(file.size > maxSize){
+        fileError.textContent = "File size must be less than 10 MB.";
+        return;
+    }
+
+    alert("Doctor Profile Created Successfully!");
+
+    window.location.href = "doctor_profile_page.html";
+
+});
+</script>
+</body>
+
+</html>

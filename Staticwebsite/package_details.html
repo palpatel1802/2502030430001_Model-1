@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Health Package Details - MediConnect</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f8ff;
+padding:40px 0;
+}
+
+/* LOGO */
+.logo{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+margin-bottom:30px;
+}
+
+.logo-icon{
+width:34px;
+height:34px;
+background:#2F80FF;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+font-weight:bold;
+border-radius:8px;
+}
+
+.logo-text{
+font-size:26px;
+font-weight:bold;
+color:#2F80FF;
+}
+
+/* CONTAINER */
+.details-container{
+width:800px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.package-banner{
+background:linear-gradient(135deg,#2F80FF,#5fa8ff);
+color:white;
+padding:30px;
+border-radius:14px;
+margin-bottom:30px;
+}
+
+.package-banner h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.price{
+font-size:28px;
+font-weight:bold;
+margin-top:10px;
+}
+
+/* DETAILS */
+.details-section{
+margin-bottom:25px;
+}
+
+.details-section h2{
+color:#1d2d50;
+margin-bottom:12px;
+}
+
+.details-section ul{
+padding-left:20px;
+color:#6b7c93;
+line-height:1.8;
+}
+
+/* BUTTON */
+button{
+width:100%;
+padding:14px;
+background:#2F80FF;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#1f6fe5;
+transform:scale(1.02);
+}
+
+@media(max-width:850px){
+.details-container{
+width:92%;
+padding:25px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="logo">
+<div class="logo-icon">+</div>
+<div class="logo-text">MediConnect</div>
+</div>
+
+<div class="details-container">
+
+<div class="package-banner">
+<h1>Full Body Checkup</h1>
+<p>Complete health screening package for early disease detection</p>
+<div class="price">₹999</div>
+</div>
+
+<div class="details-section">
+<h2>Tests Included</h2>
+<ul>
+<li>Complete Blood Count</li>
+<li>Blood Sugar Test</li>
+<li>Liver Function Test</li>
+<li>Kidney Function Test</li>
+<li>Lipid Profile</li>
+<li>Thyroid Profile</li>
+<li>Vitamin D Test</li>
+<li>Urine Routine</li>
+</ul>
+</div>
+
+<div class="details-section">
+<h2>Package Benefits</h2>
+<ul>
+<li>Free Home Sample Collection</li>
+<li>Digital Reports within 24 Hours</li>
+<li>Doctor Consultation Included</li>
+<li>NABL Certified Labs</li>
+</ul>
+</div>
+
+<div class="details-section">
+<h2>Preparation</h2>
+<ul>
+<li>8-10 hours fasting required</li>
+<li>Drink water normally</li>
+<li>Avoid heavy exercise before test</li>
+</ul>
+</div>
+
+<a href="package_booking.html">
+<button>Book This Package</button>
+</a>
+
+</div>
+
+</body>
+</html>

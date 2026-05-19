@@ -1,0 +1,222 @@
+* {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Page background */
+body {
+    background: #f5f8ff;
+    margin: 0;
+    padding: 0;
+}
+.form-group {
+    margin-bottom: 120px;
+}
+/* =========================
+   LOGO
+========================= */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    background: #2F80FF;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2F80FF;
+}
+
+/* =========================
+   FORM CONTAINER
+========================= */
+.register-container {
+    width: 420px;
+    margin: 10px auto 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    padding-bottom: 40px;
+
+}
+.register-container h2 {
+    text-align: center;
+    color: #2F80FF;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/*INPUTS & SELECT
+*/
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 14px 0;
+    border: 1px solid #dbe6ff;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+    color:#757474; /* same as your Address text color */
+    font-size: 16px;
+}
+
+/* Fix Radio Button Alignment */
+
+input[type="radio"] {
+
+    width: auto;
+    margin: 0;
+
+    padding: 0;
+
+    vertical-align: middle;
+
+    accent-color: #2F80FF;
+}
+
+.radio-options label {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 16px;
+    color: #757474;
+}
+
+input:focus,
+select:focus {
+    border-color: #2F80FF;
+    box-shadow: 0 0 6px rgba(47, 128, 255, 0.25);
+}
+
+/* LABELS*/
+label {
+    font-weight:400;
+    font-size: 14px;
+    color: #3d3d3d;
+}
+
+/*RADIO BUTTONS (SIMPLIFIED)
+ */
+.radio-group {
+    margin: 10px 0;
+}
+
+.radio-group > label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.radio-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.radio-options label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #757474;
+}
+
+input[type="radio"] {
+    accent-color: #2F80FF;
+}
+
+.select-group {
+    color: #757474 ;
+}
+/* =========================
+   BUTTON
+========================= */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #2F80FF;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1f6fe5;
+    transform: scale(1.02);
+}
+
+.error{
+    color: red;
+    font-size: 13px;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+/* =========================
+   LOGIN LINK
+========================= */
+
+.login-link {
+
+    text-align: center;
+    margin-top: 18px;
+
+    font-size: 14px;
+    color: #555;
+}
+
+.login-link a {
+
+    color: #2F80FF;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.login-link a:hover {
+
+    text-decoration: underline;
+    color: #1f6fe5;
+}
+/* RESPONSIVE */
+@media (max-width: 500px) {
+    .register-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .logo-text {
+        font-size: 22px;
+    }
+
+    .radio-options {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

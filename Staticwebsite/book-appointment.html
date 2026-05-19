@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book Appointment - MediConnect</title>
+    <link rel="stylesheet" href="book-appointment.css">
+</head>
+
+<body>
+
+    <!-- LOGO -->
+    <div class="logo">
+
+        <div class="logo-icon">+</div>
+
+        <div class="logo-text">MediConnect</div>
+
+    </div>
+
+    <!-- APPOINTMENT CONTAINER -->
+
+    <div class="appointment-container">
+
+        <!-- Doctor Name -->
+
+        <div class="doctor-header">
+
+            <h2>Book Appointment</h2>
+
+            <p>
+                Appointment with 
+                <span>Dr. Priya Sharma</span>
+            </p>
+
+        </div>
+
+        <!-- FORM -->
+
+        <form id="appointmentForm">
+
+            <!-- Patient Name -->
+
+            <input 
+                type="text"
+                id="patientName"
+                placeholder="Patient Full Name"
+            >
+
+            <small class="error" id="nameError"></small>
+
+
+            <!-- Mobile -->
+
+            <input 
+                type="tel"
+                id="mobile"
+                placeholder="Mobile Number"
+            >
+
+            <small class="error" id="mobileError"></small>
+
+
+            <!-- Date -->
+
+            <input 
+                type="date"
+                id="date"
+            >
+
+            <small class="error" id="dateError"></small>
+
+
+            <!-- Time -->
+
+            <select id="time">
+
+                <option value="">
+                    Select Time Slot
+                </option>
+
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>02:00 PM</option>
+                <option>04:00 PM</option>
+
+            </select>
+
+            <small class="error" id="timeError"></small>
+
+
+            <!-- Symptoms -->
+
+            <textarea 
+                id="symptoms"
+                placeholder="Describe Symptoms"
+            ></textarea>
+
+            <small class="error" id="symptomsError"></small>
+
+
+            <!-- BUTTON -->
+
+            <button type="submit">
+
+                Confirm Appointment
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+<script>
+
+document.getElementById("appointmentForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let patientName =
+        document.getElementById("patientName").value.trim();
+
+    let mobile =
+        document.getElementById("mobile").value.trim();
+
+    let date =
+        document.getElementById("date").value;
+
+    let time =
+        document.getElementById("time").value;
+
+    let symptoms =
+        document.getElementById("symptoms").value.trim();
+
+
+    // ERRORS
+
+    let nameError =
+        document.getElementById("nameError");
+
+    let mobileError =
+        document.getElementById("mobileError");
+
+    let dateError =
+        document.getElementById("dateError");
+
+    let timeError =
+        document.getElementById("timeError");
+
+    let symptomsError =
+        document.getElementById("symptomsError");
+
+
+    // CLEAR OLD ERRORS
+
+    nameError.textContent = "";
+    mobileError.textContent = "";
+    dateError.textContent = "";
+    timeError.textContent = "";
+    symptomsError.textContent = "";
+
+
+    let isValid = true;
+
+
+    // NAME VALIDATION
+
+    let nameRegex = /^[A-Za-z ]{6,}$/;
+
+    if(!nameRegex.test(patientName)){
+
+        nameError.textContent =
+            "Enter valid full name.";
+
+        isValid = false;
+    }
+
+
+    // MOBILE VALIDATION
+
+    let mobileRegex = /^[0-9]{10}$/;
+
+    if(!mobileRegex.test(mobile)){
+
+        mobileError.textContent =
+            "Enter valid 10 digit mobile number.";
+
+        isValid = false;
+    }
+
+
+    // DATE
+
+    if(date === ""){
+
+        dateError.textContent =
+            "Please select appointment date.";
+
+        isValid = false;
+    }
+
+
+    // TIME
+
+    if(time === ""){
+
+        timeError.textContent =
+            "Please select appointment time.";
+
+        isValid = false;
+    }
+
+
+    // SYMPTOMS
+
+    if(symptoms.length < 10){
+
+        symptomsError.textContent =
+            "Please describe symptoms properly.";
+
+        isValid = false;
+    }
+
+
+    // SUCCESS
+
+    if(isValid){
+
+        localStorage.setItem("patientName", patientName);
+localStorage.setItem("appointmentDate", date);
+localStorage.setItem("appointmentTime", time);
+localStorage.setItem("symptoms", symptoms);
+
+window.location.href = "appointment_confirmation.html";
+    }
+
+});
+
+</script>
+
+</body>
+</html>

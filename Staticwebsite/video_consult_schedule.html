@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Schedule Video Consult - MediConnect</title>
+
+    <link rel="stylesheet" href="video_consult_schedule.css">
+</head>
+
+<body>
+
+    <!-- LOGO -->
+    <div class="logo">
+        <div class="logo-icon">+</div>
+        <div class="logo-text">MediConnect</div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="schedule-container">
+
+        <h2>Schedule Video Consultation</h2>
+
+        <!-- DOCTOR INFO -->
+        <div class="doctor-box">
+
+            <img src="https://randomuser.me/api/portraits/women/45.jpg">
+
+            <div>
+                <h3>Dr. Priya Sharma</h3>
+                <p>Dermatologist</p>
+                <span>Online • Available Today</span>
+            </div>
+
+        </div>
+
+        <!-- FORM -->
+        <form id="scheduleForm">
+
+            <input type="text" placeholder="Patient Full Name" required>
+
+<input type="tel" placeholder="Mobile Number" required>
+
+<select required>
+    <option value="">Select Consultation Type</option>
+    <option>Video Consult (10 min)</option>
+    <option>Video Consult (30 min)</option>
+</select>
+
+<input type="date" id="date" required>
+
+<select id="time" required>
+    <option value="">Select Time Slot</option>
+    <option>10:00 AM</option>
+    <option>11:30 AM</option>
+    <option>02:00 PM</option>
+    <option>05:00 PM</option>
+</select>
+
+<textarea placeholder="Briefly describe your health issue..."></textarea>
+
+<button type="button" onclick="confirmSchedule()">
+    Confirm & Schedule
+</button>
+
+        </form>
+
+    </div>
+
+    <script>
+    
+        function confirmSchedule() {
+
+            // example IDs (change if yours are different)
+            let date = document.getElementById("date").value;
+            let time = document.getElementById("time").value;
+
+            if (!date || !time) {
+                alert("Please select date and time");
+                return;
+            }
+
+            // SAVE INTO LOCALSTORAGE
+            localStorage.setItem("videoDate", date);
+            localStorage.setItem("videoTime", time);
+
+            // redirect
+            window.location.href = "video_consult_schedule_confirmation.html";
+        }
+
+    </script>
+
+</body>
+
+</html>

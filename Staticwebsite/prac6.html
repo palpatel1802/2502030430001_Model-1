@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gray Layout</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        background: #f0f0f0;
+    }
+
+    header {
+        background: #5e5e5e;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    main {
+        display: grid;
+        grid-template-columns:1fr 250px;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .sidebar {
+        display: grid;
+        grid-template-rows: repeat(1fr, 3);
+        gap: 10px;
+    }
+
+    .box {
+        background: #c1c0c0;
+        padding: 15px;
+        border-radius: 6px;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .content {
+        background: #c1c0c0;
+        padding: 20px;
+        border-radius: 6px;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        background: #5e5e5e;
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
+
+    @media (max-width: 768px) {
+        main {
+            grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+            grid-template-rows: auto;
+            grid-template-columns: repeat(1fr, 3);
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h3>Header</h3>
+</header>
+
+<main>
+    <div class="content">
+        <h3>Content</h3>
+    </div>
+
+     <div class="sidebar">
+        <div class="box">HTML</div>
+        <div class="box">CSS</div>
+        <div class="box">JavaScript</div>
+    </div>
+
+
+</main>
+
+<footer>
+    <h3>Footer</h3>
+</footer>
+
+</body>
+</html>

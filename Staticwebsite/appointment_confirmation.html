@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Appointment Confirmed - MediConnect</title>
+<link rel="stylesheet" href="appointment_confirmation.css">
+</head>
+
+<body>
+
+<!-- LOGO -->
+<div class="logo">
+    <div class="logo-icon">+</div>
+    <div class="logo-text">MediConnect</div>
+</div>
+
+<!-- CONFIRMATION CARD -->
+<div class="confirm-container">
+
+    <div class="success-icon">✓</div>
+
+    <h2>Appointment Confirmed</h2>
+
+    <p>Your appointment has been scheduled successfully.</p>
+
+    <div class="appointment-details">
+
+        <div class="detail">
+            <strong>Doctor</strong>
+            <span>Dr. Priya Sharma</span>
+        </div>
+
+        <div class="detail">
+            <strong>Patient</strong>
+            <span id="patientDisplay"></span>
+        </div>
+
+        <div class="detail">
+            <strong>Date</strong>
+            <span id="dateDisplay"></span>
+        </div>
+
+        <div class="detail">
+            <strong>Time</strong>
+            <span id="timeDisplay"></span>
+        </div>
+
+        <div class="detail">
+            <strong>Symptoms</strong>
+            <span id="symptomsDisplay"></span>
+        </div>
+
+        <div class="detail">
+            <strong>Status</strong>
+            <span class="confirmed">Confirmed</span>
+        </div>
+
+    </div>
+
+    <a href="homepage.html" class="home-btn">
+        Back
+    </a>
+
+</div>
+
+<script>
+
+document.getElementById("patientDisplay").textContent =
+localStorage.getItem("patientName");
+
+document.getElementById("dateDisplay").textContent =
+localStorage.getItem("appointmentDate");
+
+document.getElementById("timeDisplay").textContent =
+localStorage.getItem("appointmentTime");
+
+document.getElementById("symptomsDisplay").textContent =
+localStorage.getItem("symptoms");
+
+</script>
+
+</body>
+</html>

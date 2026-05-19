@@ -1,0 +1,179 @@
+* {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* =========================
+   PAGE BACKGROUND
+========================= */
+
+body {
+    background: #f5f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    background: #2F80FF;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2F80FF;
+}
+
+/* =========================
+   LOGIN CONTAINER
+========================= */
+
+.login-container {
+    width: 420px;
+    margin: 10px auto 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.login-container h2 {
+    text-align: center;
+    color: #2F80FF;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    border: 1px solid #dbe6ff;
+    border-radius: 8px;
+
+    font-size: 16px;
+    outline: none;
+
+    transition: 0.2s;
+    color: #757474;
+}
+
+/* Focus Effect */
+
+input:focus {
+    border-color: #2F80FF;
+    box-shadow: 0 0 6px rgba(47, 128, 255, 0.25);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+
+    background: #2F80FF;
+
+    border: none;
+    border-radius: 8px;
+
+    color: white;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1f6fe5;
+    transform: scale(1.02);
+}
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.error {
+    color: red;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   REGISTER LINK
+========================= */
+
+.register-link {
+
+    text-align: center;
+    margin-top: 20px;
+
+    font-size: 14px;
+    color: #555;
+}
+
+.register-link a {
+
+    color: #2F80FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 500px) {
+
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .logo-text {
+        font-size: 22px;
+    }
+
+    .login-container h2 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MediConnect Registration</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <div class="logo-icon">+</div>
+            <div class="logo-text">MediConnect</div>
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="register-container">
+
+            <h2>Create Account</h2>
+
+            <form id="registerForm">
+
+                <input type="text" id="name" placeholder="Full Name" required>
+                <small class="error" id="nameError"></small>
+
+                <input type="email" id="email" placeholder="Email Address" required>
+                <small class="error" id="emailError"></small>
+
+                <input type="tel" id="mobile" maxlength="10" placeholder="Mobile Number" required>
+                <small class="error" id="mobileError"></small>
+
+                <input type="password" id="password" placeholder="Password" required>
+                <small class="error" id="passwordError"></small>
+
+                <!-- Gender -->
+                <div class="radio-group">
+                    <label>Gender</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="gender"> Male</label>
+                        <label><input type="radio" name="gender"> Female</label>
+                    </div>
+                </div>
+
+                <input type="text" id="address" placeholder="Address" required>
+                <div class="select-group">
+                    <select required>
+                        <option value="">Select State</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh</option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                        <option>Chhattisgarh</option>
+                        <option>Goa</option>
+                        <option>Gujarat</option>
+                        <option>Haryana</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Maharashtra</option>
+                        <option>Manipur</option>
+                        <option>Meghalaya</option>
+                        <option>Mizoram</option>
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
+                        <option>Punjab</option>
+                        <option>Rajasthan</option>
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu</option>
+                        <option>Telangana</option>
+                        <option>Tripura</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Uttarakhand</option>
+                        <option>West Bengal</option>
+                        <option>Andaman and Nicobar Islands</option>
+                        <option>Chandigarh</option>
+                        <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                        <option>Delhi</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Ladakh</option>
+                        <option>Lakshadweep</option>
+                        <option>Puducherry</option>
+                    </select>
+                    </select>
+
+                    <select required>
+                        <option value="">Select City</option>
+                        <option>Ahmedabad</option>
+                        <option>Surat</option>
+                        <option>Vadodara</option>
+                        <option>Rajkot</option>
+                        <option>Mumbai</option>
+                        <option>Pune</option>
+                        <option>Nagpur</option>
+                        <option>Delhi</option>
+                        <option>Noida</option>
+                        <option>Gurgaon</option>
+                        <option>Jaipur</option>
+                        <option>Udaipur</option>
+                        <option>Lucknow</option>
+                        <option>Kanpur</option>
+                        <option>Patna</option>
+                        <option>Ranchi</option>
+                        <option>Bhopal</option>
+                        <option>Indore</option>
+                        <option>Chennai</option>
+                        <option>Coimbatore</option>
+                        <option>Bengaluru</option>
+                        <option>Mysore</option>
+                        <option>Hyderabad</option>
+                        <option>Warangal</option>
+                        <option>Kolkata</option>
+                        <option>Durgapur</option>
+                        <option>Bhubaneswar</option>
+                        <option>Cuttack</option>
+                        <option>Kochi</option>
+                        <option>Thiruvananthapuram</option>
+                        <option>Visakhapatnam</option>
+                        <option>Vijayawada</option>
+                        <option>Chandigarh</option>
+                        <option>Shimla</option>
+                        <option>Dehradun</option>
+                        <option>Jammu</option>
+                        <option>Srinagar</option>
+                        <option>Gangtok</option>
+                        <option>Agartala</option>
+                        <option>Aizawl</option>
+                        <option>Shillong</option>
+                        <option>Imphal</option>
+                        <option>Itanagar</option>
+                        <option>Kohima</option>
+                        <option>Panaji</option>
+                    </select>
+                </div>
+                <!-- ROLE -->
+                <div class="radio-group">
+                    <label>Register As</label>
+
+                    <div class="radio-options">
+                        <label><input type="radio" name="role" value="patient"> Patient</label>
+                        <label><input type="radio" name="role" value="doctor"> Doctor</label>
+                    </div>
+
+                    <small class="error" id="roleError"></small>
+                </div>
+
+                <button type="submit">Submit</button>
+                <div class="login-link">
+
+                    Already have an account?
+
+                    <a href="login.html">Login Here</a>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            // INPUT VALUES
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+            let password = document.getElementById("password").value.trim();
+
+            let role = document.querySelector('input[name="role"]:checked');
+
+            // ERROR ELEMENTS
+            let nameError = document.getElementById("nameError");
+            let emailError = document.getElementById("emailError");
+            let mobileError = document.getElementById("mobileError");
+            let passwordError = document.getElementById("passwordError");
+            let roleError = document.getElementById("roleError");
+
+            // CLEAR OLD ERRORS
+            nameError.textContent = "";
+            emailError.textContent = "";
+            mobileError.textContent = "";
+            passwordError.textContent = "";
+            roleError.textContent = "";
+
+            let isValid = true;
+
+            // NAME VALIDATION
+            let nameRegex = /^[A-Za-z ]{6,}$/;
+
+            if (!nameRegex.test(name)) {
+                nameError.textContent =
+                    "Name must contain minimum 6 letters and only alphabets.";
+                isValid = false;
+            }
+
+            // EMAIL VALIDATION
+            let emailRegex = /^[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
+
+            if (!emailRegex.test(email)) {
+                emailError.textContent = "Enter valid email format.";
+                isValid = false;
+            }
+
+            // MOBILE VALIDATION
+            let mobileRegex = /^[0-9]{10}$/;
+
+            if (!mobileRegex.test(mobile)) {
+                mobileError.textContent =
+                    "Mobile number must contain exactly 10 digits.";
+                isValid = false;
+            }
+
+            // PASSWORD VALIDATION
+            let passwordRegex =
+                /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+
+            if (!passwordRegex.test(password)) {
+                passwordError.textContent =
+                    "Password must be minimum 8 characters with letter, number and special character.";
+                isValid = false;
+            }
+
+            // ROLE VALIDATION
+            if (!role) {
+                roleError.textContent = "Please select Register As.";
+                isValid = false;
+            }
+
+            // SUCCESS
+            if (isValid) {
+
+                alert("Successfully Registered!");
+
+                if (role.value === "doctor") {
+                    window.location.href = "doctor-profile-creation.html";
+                }
+
+                document.getElementById("registerForm").reset();
+            }
+        });
+
+        // MOBILE ONLY NUMBERS
+        document.getElementById("mobile").addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    </script>
+</body>
+
+</html>

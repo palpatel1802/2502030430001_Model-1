@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediConnect Cart</title>
+<link rel="stylesheet" href="add_to_cart.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+<nav class="navbar">
+
+<div class="logo">
+<span class="logo-icon">+</span>
+MediConnect
+</div>
+
+<ul class="nav-links">
+<li><a href="find-doctors.html">Find Doctors</a></li>
+<li><a href="video-consult.html">Video Consult</a></li>
+<li><a href="medicines.html">Medicines</a></li>
+<li><a href="lab-tests.html">Lab Tests</a></li>
+</ul>
+
+</nav>
+</header>
+
+<!-- CART -->
+<section class="cart-page">
+
+<h2>Your Medicine Cart</h2>
+
+<div class="cart-container">
+
+<!-- ITEM 1 -->
+<!-- ITEM 1 -->
+<div class="cart-item" data-price="120">
+
+    <img src="Paracetamol.jpg">
+
+    <div class="cart-info">
+        <h3>Paracetamol</h3>
+        <p>Pain relief medicine</p>
+        <span>₹120</span>
+    </div>
+
+    <div class="quantity-box">
+        <button class="minus">-</button>
+        <span class="qty">1</span>
+        <button class="plus">+</button>
+    </div>
+
+    <div class="item-total">₹25</div>
+
+    <button class="remove-btn">
+        <i class="fa-solid fa-trash"></i>
+    </button>
+
+</div>
+
+<!-- ITEM 2 -->
+<div class="cart-item" data-price="250">
+
+    <img src="vitamin-d.jpg">
+
+    <div class="cart-info">
+        <h3>Vitamin D</h3>
+        <p>Supports bone health</p>
+        <span>₹150</span>
+    </div>
+
+    <div class="quantity-box">
+        <button class="minus">-</button>
+        <span class="qty">1</span>
+        <button class="plus">+</button>
+    </div>
+
+    <div class="item-total">₹185</div>
+
+    <button class="remove-btn">
+        <i class="fa-solid fa-trash"></i>
+    </button>
+
+</div>
+
+<!-- SUMMARY -->
+<div class="cart-summary">
+<h3>Grand Total</h3>
+<h2 id="grandTotal">₹370</h2>
+<a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+</div>
+
+</section>
+
+<script>
+function updateCart(){
+
+let total = 0;
+
+document.querySelectorAll(".cart-item").forEach(item=>{
+
+let price = Number(item.dataset.price);
+let qty = Number(item.querySelector(".qty").textContent);
+
+let itemTotal = price * qty;
+
+// update item total
+item.querySelector(".item-total").textContent = "₹" + itemTotal;
+
+total += itemTotal;
+
+});
+
+// show grand total
+document.getElementById("grandTotal").textContent = "₹" + total;
+
+// SAVE TO LOCALSTORAGE (THIS IS IMPORTANT FOR CHECKOUT)
+localStorage.setItem("grandTotal", total);
+}
+
+/* PLUS BUTTON */
+document.querySelectorAll(".plus").forEach(btn=>{
+btn.onclick = function(){
+let qty = this.previousElementSibling;
+qty.textContent = Number(qty.textContent) + 1;
+updateCart();
+};
+});
+
+/* MINUS BUTTON */
+document.querySelectorAll(".minus").forEach(btn=>{
+btn.onclick = function(){
+let qty = this.nextElementSibling;
+if(Number(qty.textContent) > 1){
+qty.textContent = Number(qty.textContent) - 1;
+updateCart();
+}
+};
+});
+
+/* REMOVE ITEM */
+document.querySelectorAll(".remove-btn").forEach(btn=>{
+btn.onclick = function(){
+this.closest(".cart-item").remove();
+updateCart();
+};
+});
+
+/* INITIAL LOAD */
+updateCart();
+
+</script>
+
+</body>
+</html>

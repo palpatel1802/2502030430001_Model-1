@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirm Schedule - MediConnect</title>
+<link rel="stylesheet" href="video_consult_schedule_confirmation.css">
+</head>
+
+<body>
+
+<!-- LOGO -->
+<div class="logo">
+    <div class="logo-icon">+</div>
+    <div class="logo-text">MediConnect</div>
+</div>
+
+<!-- CONFIRM BOX -->
+<div class="confirm-container">
+
+    <div class="success-icon">✔</div>
+
+    <h2>Video Consultation Scheduled</h2>
+
+    <p class="sub-text">
+        Your video consultation has been successfully scheduled.
+    </p>
+
+    <!-- DETAILS -->
+    <div class="details-box">
+
+        <h3>Consultation Details</h3>
+
+        <p><b>Doctor:</b> Dr. Priya Sharma</p>
+        <p><b>Speciality:</b> Dermatologist</p>
+
+        <p><b>Date:</b> <span id="date">--</span></p>
+        <p><b>Time:</b> <span id="time">--</span></p>
+
+        <p><b>Status:</b> <span class="status">Confirmed</span></p>
+
+    </div>
+
+    <!-- INFO -->
+    <div class="info-box">
+        <p>📩 You will receive a confirmation email & SMS.</p>
+        <p>📹 Join link will be shared 10 minutes before consultation.</p>
+    </div>
+
+    <!-- BUTTON -->
+    <a href="homepage.html" class="home-btn">Back to Home</a>
+
+</div>
+
+<script>
+// GET DATA FROM LOCALSTORAGE (optional future enhancement)
+document.getElementById("date").innerText =
+    localStorage.getItem("videoDate") || "Not Selected";
+
+document.getElementById("time").innerText =
+    localStorage.getItem("videoTime") || "Not Selected";
+</script>
+
+</body>
+</html>
