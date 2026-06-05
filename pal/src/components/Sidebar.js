@@ -9,7 +9,7 @@ const menuItems = [
   { to: "/mynotes", label: "My Notes" },
   { to: "/savednotes", label: "Saved Notes" },
   { to: "/downloaded", label: "Downloaded Notes" },
-  { to: "/settings", label: "Settings" },
+  { to: "/settings", label: "Edit Profile" },
 ];
 
 function Sidebar() {
