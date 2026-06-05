@@ -86,7 +86,7 @@ function Profile() {
               <section className="profile-card">
                 <h3>About</h3>
                 <p className="profile-bio">
-                  {user?.bio?.trim() ? user.bio : "Add a short bio from Settings to personalize your profile."}
+                  {user?.bio?.trim() ? user.bio : "Add a short bio from Edit Profile to personalize your profile."}
                 </p>
               </section>
 
@@ -107,7 +107,7 @@ function Profile() {
 
               <div className="profile-actions">
                 <Link to="/settings" className="inline-action-link">
-                  Edit in Settings
+                  Edit Profile
                 </Link>
                 <Link to="/mynotes" className="inline-action-link">
                   View My Notes
