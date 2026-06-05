@@ -75,8 +75,8 @@ function Settings() {
         <main className="dashboard-content">
           <UserBackLink to="/dashboard" />
           <div className="welcome-banner">
-            <h1>Settings</h1>
-            <p>Manage your StudyHub preferences.</p>
+            <h1>Edit Profile</h1>
+            <p>Manage your StudyHub Profile.</p>
           </div>
 
           <form className="settings-panel" onSubmit={handleSubmit}>
