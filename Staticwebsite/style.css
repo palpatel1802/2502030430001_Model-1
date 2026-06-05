@@ -264,20 +264,26 @@ footer {
     margin-bottom: 10px;
 }
 
-.footer-content p {
+.footer-content a {
+    display:block;
     font-size: 14px;
     margin: 6px 0;
     cursor: pointer;
     color: #94a3b8;
+    text-decoration: none;
 }
 
-.footer-content p:hover {
+.footer-content a:hover {
     color: var(--primary);
 }
 
-.footer-content i {
-    margin-right: 10px;
-    cursor: pointer;
+.footer-content div:last-child a {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.footer-content a i {
+    font-size: 20px;
 }
 
 footer .copyright {
