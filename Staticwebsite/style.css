@@ -42,7 +42,7 @@ body {
 }
 
 .logo {
-    font-size: 26px;
+    text-decoration:none; color:inherit; font-size: 26px;
     font-weight: bold;
     color: #2F80FF;
     display: flex;
@@ -412,7 +412,7 @@ footer .copyright {
     justify-content: space-between;
     align-items: center;
     padding: 60px 40px;
-    background: linear-gradient(135deg, #eef5ff, #ffffff);
+    max-width:1200px; margin:0 auto; background: linear-gradient(135deg, #eef5ff, #ffffff);
 }
 
 .video-text {
@@ -911,3 +911,4 @@ footer {
         justify-content:center;
     }
 }
+
