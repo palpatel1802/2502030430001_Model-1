@@ -25,7 +25,7 @@ body{
 /* LOGO*/
 
 .logo{
-    display:flex;
+    text-decoration:none; color:inherit; display:flex;
     justify-content:center;
     align-items:center;
 
