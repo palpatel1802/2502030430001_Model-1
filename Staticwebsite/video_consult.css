@@ -1,92 +1,10 @@
-
-/* =========================
-   RESPONSIVE NAVBAR
-========================= */
-
-.video-hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:70px 40px;
-    background:linear-gradient(135deg,#eef5ff,#ffffff);
-    gap:40px;
-}
-
-.video-text{
-    max-width:50%;
-}
-
-.video-text h1{
-    font-size:40px;
-    color:#1f2d3d;
-    margin-bottom:15px;
-    line-height:1.3;
-}
-
-.video-text p{
-    color:#6b7c93;
-    font-size:16px;
-    margin-bottom:25px;
-}
-
-/* =========================
-   SEARCH BOX
-========================= */
-
-.video-search{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-}
-
-.video-search input{
-    padding:12px 14px;
-    width:260px;
-    border:1px solid #dbe6ff;
-    border-radius:10px;
-    outline:none;
-    font-size:15px;
-    transition:.2s;
-}
-
-.video-search input:focus{
-    border-color:#2f80ed;
-    box-shadow:0 0 5px rgba(47,128,237,0.2);
-}
-
-.video-search button{
-    padding:12px 20px;
-    background:#2f80ed;
-    color:white;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    font-size:15px;
-    transition:.3s;
-}
-
-.video-search button:hover{
-    background:#1f6fe5;
-}
-
-/* =========================
-   HERO IMAGE
-========================= */
-
-.video-image img{
-    width:420px;
-    border-radius:16px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    object-fit:cover;
-}
-
 /* =========================
    SECTION TITLE
 ========================= */
 
 .video-specialities,
 .video-doctors{
-    padding:60px 40px;
+    padding:50px 40px;
     text-align:center;
 }
 
@@ -103,17 +21,26 @@
 
 .video-cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+    max-width:1200px;
+    margin:0 auto;
 }
 
 .v-card{
     background:white;
-    padding:25px 20px;
+    padding:40px 20px;
     border-radius:16px;
     box-shadow:0 4px 14px rgba(0,0,0,0.05);
     transition:.3s;
     cursor:pointer;
+
+    min-height:150px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 .v-card:hover{
@@ -138,8 +65,10 @@
 
 .video-doctor-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    max-width:1200px;
+    margin:0 auto;
     align-items:stretch;
 }
 
@@ -149,7 +78,7 @@
 
 .video-card{
     background:white;
-    padding:25px 20px;
+    padding:30px 25px;
     border-radius:16px;
     box-shadow:0 4px 14px rgba(0,0,0,0.05);
     text-align:center;
@@ -164,8 +93,6 @@
     transform:translateY(-6px);
 }
 
-/* IMAGE */
-
 .video-card img{
     width:85px;
     height:85px;
@@ -173,8 +100,6 @@
     object-fit:cover;
     margin:0 auto 15px;
 }
-
-/* TEXT */
 
 .video-card h3{
     color:#1f2d3d;
@@ -200,64 +125,6 @@
 
 /* BUTTON */
 
-.video-card button{
-    margin-top:auto;
-    padding:12px;
-    background:#2f80ed;
-    color:white;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    font-size:15px;
-    transition:.3s;
-}
-
-.video-card button:hover{
-    background:#1f6fe5;
-}
-
-/* ================= FOOTER ================= */
-footer {
-    background: #0f172a;
-    color: #cbd5e1;
-    padding: 50px 40px;
-    margin-top: 40px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.footer-content h3 {
-    color: white;
-    margin-bottom: 10px;
-}
-
-.footer-content p {
-    font-size: 14px;
-    margin: 6px 0;
-    cursor: pointer;
-    color: #94a3b8;
-}
-
-.footer-content p:hover {
-    color: var(--primary);
-}
-
-.footer-content i {
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-footer .copyright {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 13px;
-    color: #64748b;
-}
 .consult-btn{
     display:inline-block;
     margin-top:10px;
@@ -277,49 +144,36 @@ footer .copyright {
    RESPONSIVE
 ========================= */
 
-@media(max-width:900px){
+@media(max-width:1100px){
 
-    .video-hero{
-        flex-direction:column;
-        text-align:center;
+    .video-cards{
+        grid-template-columns:repeat(3,1fr);
     }
 
-    .video-text{
-        max-width:100%;
+    .video-doctor-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    .video-cards{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .video-search{
-        justify-content:center;
-    }
-
-    .video-image img{
-        width:100%;
-        max-width:450px;
+    .video-doctor-grid{
+        grid-template-columns:1fr;
     }
 }
 
 @media(max-width:600px){
 
-    .video-hero,
     .video-specialities,
     .video-doctors{
         padding:40px 20px;
     }
 
-    .video-text h1{
-        font-size:30px;
-    }
-
-    .video-specialities h2,
-    .video-doctors h2{
-        font-size:24px;
-    }
-
-    .video-search input{
-        width:100%;
-    }
-
-    .video-search button{
-        width:100%;
+    .video-cards{
+        grid-template-columns:1fr;
     }
 }
