@@ -1,0 +1,69 @@
+.signup-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EDF0F5;
+  padding: 30px;
+}
+
+.signup-card {
+  width: 500px;
+  background: #F8F8FA;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #D0D1DA;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.auth-logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.auth-logo h1 {
+  color: #60617B;
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.auth-logo p {
+  color: #888;
+}
+
+.signup-card input,
+.signup-card select {
+  padding: 14px;
+  border: 1px solid #D0D1DA;
+  border-radius: 10px;
+  outline: none;
+  background: white;
+}
+
+.auth-btn {
+  background: #60617B;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.auth-link {
+  text-align: center;
+}
+
+.auth-error {
+  color: #9b2c2c;
+  background: #fff1f1;
+  border: 1px solid #f1b8b8;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}

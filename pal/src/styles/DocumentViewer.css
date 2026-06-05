@@ -1,0 +1,44 @@
+.document-viewer-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 400px;
+  padding: 40px 24px;
+  text-align: center;
+  color: #60617B;
+}
+
+.document-viewer-error {
+  background: #fff1f1;
+  border-radius: 8px;
+}
+
+.office-preview-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  min-height: 520px;
+}
+
+.office-frame {
+  flex: 1;
+  min-height: 520px;
+}
+
+.office-preview-fallback {
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  color: #60617B;
+  background: #EDF0F5;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.office-preview-fallback a {
+  color: #60617B;
+  font-weight: 600;
+}

@@ -1,0 +1,16 @@
+.dashboard-search {
+  width: 100%;
+  max-width: 760px;
+  padding: 14px;
+  margin-bottom: 25px;
+  border: 1px solid #D0D1DA;
+  border-radius: 10px;
+  outline: none;
+  background: #F8F8FA;
+  color: #60617B;
+  font-size: 16px;
+}
+
+.dashboard-search:focus {
+  border-color: #60617B;
+}

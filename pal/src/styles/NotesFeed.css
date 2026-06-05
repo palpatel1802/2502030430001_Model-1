@@ -1,0 +1,32 @@
+.notes-feed {
+  display: grid;
+  gap: 20px;
+}
+
+.notes-feed-header h2 {
+  color: #60617B;
+  font-size: 1.35rem;
+  margin-bottom: 6px;
+}
+
+.notes-feed-header p {
+  color: #60617B;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.notes-count {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #60617B;
+  background: #EDF0F5;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.route-loading {
+  padding: 40px;
+  text-align: center;
+  color: #60617B;
+}

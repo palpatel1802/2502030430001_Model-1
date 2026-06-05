@@ -1,0 +1,79 @@
+.study-form {
+  background: #F8F8FA;
+  border: 1px solid #D0D1DA;
+  border-radius: 15px;
+  padding: 28px;
+  display: grid;
+  gap: 16px;
+  max-width: 760px;
+  box-shadow: 0 8px 24px rgba(96, 97, 123, 0.05);
+}
+
+.study-form input,
+.study-form textarea {
+  padding: 14px 16px;
+  border: 1px solid #D0D1DA;
+  border-radius: 10px;
+  outline: none;
+  background: white;
+  color: #60617B;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.study-form input:focus,
+.study-form textarea:focus {
+  border-color: #60617B;
+  box-shadow: 0 0 0 3px rgba(96, 97, 123, 0.12);
+}
+
+.file-upload-field {
+  display: grid;
+  gap: 8px;
+  color: #60617B;
+  font-weight: 500;
+}
+
+.file-upload-field input[type="file"] {
+  padding: 12px;
+  background: white;
+  border: 1px dashed #D0D1DA;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.file-selected,
+.current-file-label {
+  color: #60617B;
+  font-size: 0.9rem;
+}
+
+.study-form .auth-btn {
+  margin-top: 4px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #60617B;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.study-form .auth-btn:hover:not(:disabled) {
+  opacity: 0.92;
+}
+
+.study-form .auth-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.auth-error {
+  color: #9b2c2c;
+  background: #fff1f1;
+  border: 1px solid #f1b8b8;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}

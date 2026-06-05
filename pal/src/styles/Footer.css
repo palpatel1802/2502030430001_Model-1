@@ -1,0 +1,39 @@
+.footer {
+  background: #60617B;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 44px 8%;
+}
+
+.footer-section h4 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.footer-section p {
+  opacity: 0.9;
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.92;
+  transition: opacity 0.2s ease;
+}
+
+.footer-section a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
